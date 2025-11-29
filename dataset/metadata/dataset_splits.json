@@ -1,0 +1,44 @@
+{
+  "train": [
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_7.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_augmentation_3.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_6.wav",
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_2.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_interpolation_1.wav",
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_3.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_1.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_augmentation_2.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_interpolation_3.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_interpolation_2.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_interpolation_4.wav",
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_6.wav",
+    "/home/user/webapp/dataset/audio/raw/1.wav",
+    "/home/user/webapp/dataset/audio/raw/5.wav",
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_1.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_interpolation_0.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_interpolation_4.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_interpolation_0.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_augmentation_1.wav",
+    "/home/user/webapp/dataset/audio/raw/2.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_4.wav",
+    "/home/user/webapp/dataset/audio/raw/3.wav",
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_5.wav",
+    "/home/user/webapp/dataset/audio/raw/4.wav",
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_4.wav"
+  ],
+  "validation": [
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_3.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_7.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_augmentation_0.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_2.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_interpolation_3.wav"
+  ],
+  "test": [
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_5.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_interpolation_1.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_scale_based_0.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_interpolation_2.wav",
+    "/home/user/webapp/dataset/audio/synthetic/phuthai_synthetic_augmentation_4.wav",
+    "/home/user/webapp/dataset/audio/synthetic/toei_synthetic_scale_based_0.wav"
+  ]
+}

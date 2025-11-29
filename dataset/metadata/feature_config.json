@@ -1,0 +1,26 @@
+{
+  "audio_features": {
+    "spectrogram": {
+      "enabled": true,
+      "n_mels": 128,
+      "hop_length": 512,
+      "n_fft": 2048
+    },
+    "cqt": {
+      "enabled": true,
+      "n_bins": 84,
+      "hop_length": 512,
+      "fmin": 32.7
+    },
+    "mfcc": {
+      "enabled": true,
+      "n_mfcc": 13,
+      "hop_length": 512
+    }
+  },
+  "thai_specific": {
+    "scale_quantization": true,
+    "pattern_extraction": true,
+    "rhythmic_analysis": true
+  }
+}

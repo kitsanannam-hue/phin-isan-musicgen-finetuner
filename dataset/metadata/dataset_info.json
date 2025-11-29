@@ -1,0 +1,376 @@
+{
+  "dataset_name": "thai_music_ai_dataset",
+  "version": "1.0",
+  "description": "Thai Music AI Dataset combining Thai Isan Lute transcription and Thai Music AI Dataset project",
+  "created_date": "2025-11-29",
+  "audio_config": {
+    "sample_rate": 22050,
+    "hop_length": 512,
+    "n_fft": 2048,
+    "n_mels": 128,
+    "n_cqt": 84
+  },
+  "thai_music_config": {
+    "scale_degrees": 7,
+    "regions": [
+      "central",
+      "isan",
+      "northern",
+      "southern"
+    ],
+    "scales": [
+      "lai_yai",
+      "lai_noi",
+      "lai_se",
+      "lai_sutsanaen",
+      "lai_pong_sai",
+      "lai_soi",
+      "thai_pentatonic"
+    ],
+    "melodic_patterns": [
+      "pattern_12352",
+      "pattern_532121",
+      "pattern_232165",
+      "pattern_561216",
+      "pattern_13531",
+      "pattern_24642"
+    ]
+  },
+  "dataset_stats": {
+    "total_audio_files": 36,
+    "total_spectrograms": 5,
+    "regions": {},
+    "scales": {},
+    "duration_stats": {}
+  },
+  "file_structure": {
+    "dataset": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "audio",
+          "type": "directory"
+        },
+        {
+          "name": "metadata",
+          "type": "directory"
+        },
+        {
+          "name": "features",
+          "type": "directory"
+        },
+        {
+          "name": "models",
+          "type": "directory"
+        }
+      ]
+    },
+    "dataset/audio": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "raw",
+          "type": "directory"
+        },
+        {
+          "name": "processed",
+          "type": "directory"
+        },
+        {
+          "name": "synthetic",
+          "type": "directory"
+        }
+      ]
+    },
+    "dataset/audio/raw": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "1.wav",
+          "type": "file",
+          "size": 7231606
+        },
+        {
+          "name": "2.wav",
+          "type": "file",
+          "size": 4209874
+        },
+        {
+          "name": "3.wav",
+          "type": "file",
+          "size": 5798532
+        },
+        {
+          "name": "4.wav",
+          "type": "file",
+          "size": 3280598
+        },
+        {
+          "name": "5.wav",
+          "type": "file",
+          "size": 12502438
+        }
+      ]
+    },
+    "dataset/audio/processed": {
+      "type": "directory",
+      "contents": []
+    },
+    "dataset/audio/synthetic": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "phuthai_interpolation_0.wav",
+          "type": "file",
+          "size": 3217120
+        },
+        {
+          "name": "phuthai_interpolation_1.wav",
+          "type": "file",
+          "size": 3395328
+        },
+        {
+          "name": "phuthai_interpolation_2.wav",
+          "type": "file",
+          "size": 4587264
+        },
+        {
+          "name": "phuthai_interpolation_3.wav",
+          "type": "file",
+          "size": 4047422
+        },
+        {
+          "name": "phuthai_interpolation_4.wav",
+          "type": "file",
+          "size": 4501830
+        },
+        {
+          "name": "phuthai_synthetic_augmentation_0.wav",
+          "type": "file",
+          "size": 6145062
+        },
+        {
+          "name": "phuthai_synthetic_augmentation_1.wav",
+          "type": "file",
+          "size": 3188728
+        },
+        {
+          "name": "phuthai_synthetic_augmentation_2.wav",
+          "type": "file",
+          "size": 2930618
+        },
+        {
+          "name": "phuthai_synthetic_augmentation_3.wav",
+          "type": "file",
+          "size": 4110480
+        },
+        {
+          "name": "phuthai_synthetic_augmentation_4.wav",
+          "type": "file",
+          "size": 5798532
+        },
+        {
+          "name": "phuthai_synthetic_interpolation_0.wav",
+          "type": "file",
+          "size": 3280598
+        },
+        {
+          "name": "phuthai_synthetic_interpolation_1.wav",
+          "type": "file",
+          "size": 3280598
+        },
+        {
+          "name": "phuthai_synthetic_interpolation_2.wav",
+          "type": "file",
+          "size": 5798532
+        },
+        {
+          "name": "phuthai_synthetic_interpolation_3.wav",
+          "type": "file",
+          "size": 3280598
+        },
+        {
+          "name": "phuthai_synthetic_interpolation_4.wav",
+          "type": "file",
+          "size": 4209874
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_0.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_1.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_2.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_3.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_4.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_5.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_6.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "phuthai_synthetic_scale_based_7.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_0.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_1.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_2.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_3.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_4.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_5.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_6.wav",
+          "type": "file",
+          "size": 110294
+        },
+        {
+          "name": "toei_synthetic_scale_based_7.wav",
+          "type": "file",
+          "size": 110294
+        }
+      ]
+    },
+    "dataset/metadata": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "annotations",
+          "type": "directory"
+        },
+        {
+          "name": "train",
+          "type": "directory"
+        },
+        {
+          "name": "val",
+          "type": "directory"
+        },
+        {
+          "name": "test",
+          "type": "directory"
+        }
+      ]
+    },
+    "dataset/metadata/annotations": {
+      "type": "directory",
+      "contents": []
+    },
+    "dataset/metadata/train": {
+      "type": "directory",
+      "contents": []
+    },
+    "dataset/metadata/val": {
+      "type": "directory",
+      "contents": []
+    },
+    "dataset/metadata/test": {
+      "type": "directory",
+      "contents": []
+    },
+    "dataset/features": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "spectrograms",
+          "type": "directory"
+        },
+        {
+          "name": "cqt",
+          "type": "directory"
+        },
+        {
+          "name": "mfcc",
+          "type": "directory"
+        }
+      ]
+    },
+    "dataset/features/spectrograms": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "1.png",
+          "type": "file",
+          "size": 485265
+        },
+        {
+          "name": "2.png",
+          "type": "file",
+          "size": 498060
+        },
+        {
+          "name": "3.png",
+          "type": "file",
+          "size": 520154
+        },
+        {
+          "name": "4.png",
+          "type": "file",
+          "size": 483202
+        },
+        {
+          "name": "5.png",
+          "type": "file",
+          "size": 524519
+        }
+      ]
+    },
+    "dataset/features/cqt": {
+      "type": "directory",
+      "contents": []
+    },
+    "dataset/features/mfcc": {
+      "type": "directory",
+      "contents": []
+    },
+    "dataset/models": {
+      "type": "directory",
+      "contents": []
+    }
+  }
+}
