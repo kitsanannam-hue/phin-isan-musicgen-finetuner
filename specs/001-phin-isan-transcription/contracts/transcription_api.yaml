@@ -1,0 +1,175 @@
+# OpenAPI Specification for Thai Isan Music Transcription Service
+
+openapi: 3.0.1
+info:
+  title: Thai Isan Music Transcription API
+  description: API for transcribing Thai Isan lute (Phin) music using AI
+  version: 1.0.0
+
+paths:
+  /transcribe:
+    post:
+      summary: Transcribe Isan music audio to MIDI
+      description: Upload audio and get back a MIDI transcription
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                audio:
+                  type: string
+                  format: binary
+                  description: Audio file in supported format (WAV, MP3, etc.)
+                model_version:
+                  type: string
+                  default: "latest"
+                  description: Version of the transcription model to use
+      responses:
+        '200':
+          description: Successful transcription
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TranscriptionResult'
+        '400':
+          description: Invalid input
+        '500':
+          description: Internal server error
+          
+  /evaluate:
+    post:
+      summary: Evaluate transcription quality
+      description: Compare generated transcription with reference
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                reference_midi:
+                  type: string
+                  format: binary
+                  description: Reference MIDI file for comparison
+                predicted_midi:
+                  type: string
+                  format: binary
+                  description: Predicted MIDI file to evaluate
+      responses:
+        '200':
+          description: Evaluation results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EvaluationResult'
+        '400':
+          description: Invalid input
+        '500':
+          description: Internal server error
+
+  /extract_features:
+    post:
+      summary: Extract CQT features from audio
+      description: Extract Constant-Q Transform features optimized for Thai music
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                audio:
+                  type: string
+                  format: binary
+                  description: Audio file in supported format
+                sample_rate:
+                  type: integer
+                  default: 22050
+                  description: Sample rate for processing
+      responses:
+        '200':
+          description: Features extracted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  features:
+                    type: array
+                    items:
+                      type: array
+                      items:
+                        type: number
+                  shape:
+                    type: array
+                    items:
+                      type: integer
+        '400':
+          description: Invalid input
+        '500':
+          description: Internal server error
+
+components:
+  schemas:
+    TranscriptionResult:
+      type: object
+      properties:
+        transcription_id:
+          type: string
+          description: Unique ID for the transcription
+        notes:
+          type: array
+          items:
+            type: object
+            properties:
+              start_time:
+                type: number
+                description: Start time in seconds
+              end_time:
+                type: number
+                description: End time in seconds
+              pitch:
+                type: integer
+                description: MIDI pitch number (0-127)
+              velocity:
+                type: integer
+                description: Note velocity (0-127)
+        audio_source:
+          type: string
+          description: Source of the audio
+        processing_time:
+          type: number
+          description: Time taken for transcription in seconds
+          
+    EvaluationResult:
+      type: object
+      properties:
+        onset_f1:
+          type: number
+          format: float
+          description: Onset F1 score (0.0-1.0)
+        pitch_f1:
+          type: number
+          format: float
+          description: Pitch F1 score (0.0-1.0)
+        onset_precision:
+          type: number
+          format: float
+          description: Onset precision (0.0-1.0)
+        onset_recall:
+          type: number
+          format: float
+          description: Onset recall (0.0-1.0)
+        pitch_precision:
+          type: number
+          format: float
+          description: Pitch precision (0.0-1.0)
+        pitch_recall:
+          type: number
+          format: float
+          description: Pitch recall (0.0-1.0)
+        evaluation_time:
+          type: number
+          description: Time taken for evaluation in seconds

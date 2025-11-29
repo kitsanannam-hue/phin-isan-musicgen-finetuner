@@ -1,0 +1,10 @@
+librosa
+pretty_midi
+yt-dlp
+torch
+mir_eval
+numpy
+scipy
+matplotlib
+google-api-python-client
+google-auth
